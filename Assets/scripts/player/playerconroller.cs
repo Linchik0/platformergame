@@ -24,7 +24,15 @@ public class playerconroller : MonoBehaviour
         {
             animator.SetInteger("state", 1);
         }
-        Flip();
+        else
+        {
+            Flip();
+            if (isGrounded)
+            {
+                animator.SetInteger("state", 2);
+            }
+        }
+        
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(transform.up * jumpHeight, ForceMode2D.Impulse);
@@ -53,5 +61,9 @@ public class playerconroller : MonoBehaviour
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
         isGrounded = colliders.Length > 1;
+        if (isGrounded)
+        {
+            animator.SetInteger("state", 3);
+        }
     }
 }
