@@ -20,7 +20,10 @@ public class sawcontroller : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            print("касание игрока");
+            PlayerController Player = collision.gameObject.GetComponent<PlayerController>();
+            Player.RecountHealthPoints(-1);
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            rb.AddForce(transform.up * 5f, ForceMode2D.Impulse);
         }
     }
 }
