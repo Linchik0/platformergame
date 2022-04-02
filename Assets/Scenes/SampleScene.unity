@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -547,6 +548,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f95154652ba6d14a994104eb39aa9c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &716863193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1339,7 @@ GameObject:
   - component: {fileID: 1510621566}
   - component: {fileID: 1510621567}
   - component: {fileID: 1510621569}
+  - component: {fileID: 1510621568}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1436,6 +1450,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1510621568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510621563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34055f781e89eb48b860b7b93042b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 8
+  jumpHeight: 13
+  groundCheck: {fileID: 1584003703}
+  HealthPoints: 5
+  main: {fileID: 519420033}
 --- !u!95 &1510621569
 Animator:
   serializedVersion: 3
